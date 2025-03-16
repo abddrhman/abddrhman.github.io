@@ -19,6 +19,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            padding: 20px;
         }
         h1 {
             font-size: 3rem;
@@ -72,6 +73,7 @@
         .buttons {
             margin-top: 20px;
             display: flex;
+            flex-direction: column;
             gap: 15px;
             opacity: 0;
             animation: fadeInUp 1s ease-out 1s forwards;
@@ -108,6 +110,11 @@
         .btn:hover {
             transform: scale(1.1);
             opacity: 0.8;
+        }
+        @media (min-width: 600px) {
+            .buttons {
+                flex-direction: row;
+            }
         }
     </style>
 </head>
