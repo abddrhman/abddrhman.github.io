@@ -1,0 +1,168 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const socialLinks = [
+  {
+    label: "GitHub",
+    href: "https://github.com",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+        <path d="M9 18c-4.51 2-5-2-7-2" />
+      </svg>
+    ),
+  },
+  {
+    label: "Twitter",
+    href: "https://twitter.com",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+      </svg>
+    ),
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect width="4" height="12" x="2" y="9" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    ),
+  },
+  {
+    label: "Dribbble",
+    href: "https://dribbble.com",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
+        <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
+        <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72" />
+      </svg>
+    ),
+  },
+];
+
+export default function HeroSection() {
+  return (
+    <section className="relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-16 sm:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5 relative"
+          >
+            <div className="relative inline-block">
+              <div className="w-36 h-36 sm:w-56 sm:h-56 md:w-64 md:h-64 border-[3px] sm:border-4 border-black shadow-brutal bg-accent-500 flex items-center justify-center overflow-hidden relative -rotate-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent-400 to-accent-600" />
+                <svg
+                  viewBox="0 0 200 200"
+                  className="w-24 h-24 sm:w-36 sm:h-36 relative z-10 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <circle cx="100" cy="80" r="40" />
+                  <path d="M40 180 c0 -40 30 -60 60 -60 s60 20 60 60" />
+                </svg>
+              </div>
+              <div className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 w-full h-full border-[3px] sm:border-4 border-black bg-[#f8f5f0] -z-10" />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="lg:col-span-7"
+          >
+            <h1 className="font-display font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tighter text-black -ml-1">
+              qynn
+              <span className="block text-accent-500">.</span>
+            </h1>
+
+            <div className="mt-3 sm:mt-4 relative inline-block">
+              <span className="font-display font-bold text-sm sm:text-2xl md:text-3xl uppercase tracking-wide bg-black text-white px-3 py-1.5 sm:px-4 sm:py-2 inline-block">
+                designer & developer
+              </span>
+              <span className="absolute -bottom-1 left-2 w-full h-0.5 sm:h-1 bg-accent-500" />
+            </div>
+
+            <p className="mt-4 sm:mt-6 font-body text-base sm:text-xl text-gray-700 max-w-lg leading-relaxed">
+              crafting digital experiences with bold aesthetics and clean code. 
+              pushing pixels and boundaries since 2019.
+            </p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-4 sm:mt-6 flex items-center gap-2 sm:gap-3"
+            >
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, rotate: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-black flex items-center justify-center bg-white hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors shadow-brutal"
+                  aria-label={social.label}
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12 sm:mt-20 lg:mt-24"
+        >
+          <div className="border-[3px] sm:border-4 border-black shadow-brutal bg-white relative overflow-hidden">
+            <div className="h-1.5 sm:h-2 bg-accent-500 w-full" />
+            <div className="p-4 sm:p-8">
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-accent-500 border border-black shrink-0" />
+                <h2 className="font-display font-bold text-base sm:text-2xl uppercase tracking-tight">
+                  what i&apos;m doing now
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6">
+                <div className="border-2 border-black p-3 sm:p-4 bg-accent-50">
+                  <span className="font-display font-bold text-xs sm:text-sm uppercase text-accent-600">building</span>
+                  <p className="font-body font-semibold text-sm sm:text-base mt-1">
+                    A brutalism-inspired component library
+                  </p>
+                </div>
+                <div className="border-2 border-black p-3 sm:p-4 bg-white">
+                  <span className="font-display font-bold text-xs sm:text-sm uppercase text-accent-600">learning</span>
+                  <p className="font-body font-semibold text-sm sm:text-base mt-1">
+                    Advanced motion design with framer-motion
+                  </p>
+                </div>
+                <div className="border-2 border-black p-3 sm:p-4 bg-accent-50">
+                  <span className="font-display font-bold text-xs sm:text-sm uppercase text-accent-600">reading</span>
+                  <p className="font-body font-semibold text-sm sm:text-base mt-1">
+                    &ldquo;The Design of Everyday Things&rdquo;
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
