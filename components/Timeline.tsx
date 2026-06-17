@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 interface TimelineItem {
   year: string;
+  month?: string;
   title: string;
   institution: string;
   description: string;
@@ -37,9 +38,14 @@ export default function Timeline({ items }: TimelineProps) {
                   <div className={`border-[3px] md:border-4 border-black shadow-brutal bg-white p-4 md:p-5 ${
                     isLeft ? "md:-mr-2" : "md:-ml-2"
                   }`}>
-                    <span className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-accent-500 leading-none block -mt-1 md:-mt-2">
+                    <span className="font-display font-bold text-xl md:text-2xl lg:text-3xl text-accent-500 leading-none block -mt-1 md:-mt-2">
                       {item.year}
                     </span>
+                    {item.month && (
+                      <span className="font-body font-semibold text-[10px] md:text-xs text-gray-500 uppercase tracking-wider block mt-0.5">
+                        {item.month}
+                      </span>
+                    )}
                     <h3 className="font-display font-bold text-sm md:text-base uppercase tracking-tight mt-1.5 md:mt-2">
                       {item.title}
                     </h3>
@@ -66,9 +72,14 @@ export default function Timeline({ items }: TimelineProps) {
                   <div className="w-3.5 h-3.5 bg-accent-500 border-2 border-black rotate-45" />
                 </div>
                 <div className="border-[3px] border-black shadow-brutal bg-white p-3.5">
-                  <span className="font-display font-bold text-2xl text-accent-500 leading-none block">
+                  <span className="font-display font-bold text-lg text-accent-500 leading-none block">
                     {item.year}
                   </span>
+                  {item.month && (
+                    <span className="font-body font-semibold text-[10px] text-gray-500 uppercase tracking-wider block mt-0.5">
+                      {item.month}
+                    </span>
+                  )}
                   <h3 className="font-display font-bold text-sm uppercase tracking-tight mt-1.5">
                     {item.title}
                   </h3>

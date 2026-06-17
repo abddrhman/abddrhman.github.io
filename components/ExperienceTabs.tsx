@@ -6,6 +6,7 @@ import Timeline from "./Timeline";
 
 interface TimelineItem {
   year: string;
+  month?: string;
   title: string;
   institution: string;
   description: string;

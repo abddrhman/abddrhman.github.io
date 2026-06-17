@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     default: "qynn | design & code",
     template: "%s | qynn",
   },
-  description: "Portfolio of qynn — designer & developer. Neo brutalism meets the web.",
+  description: "Portfolio of qynn — Software Engineer Student. Neo brutalism meets the web.",
   openGraph: {
     title: "qynn | design & code",
-    description: "Portfolio of qynn — designer & developer.",
+    description: "Portfolio of qynn — Software Engineer Student.",
     type: "website",
   },
 };
