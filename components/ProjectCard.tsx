@@ -33,24 +33,25 @@ export default function ProjectCard({
       <Link href={`/project/${slug}`} className="block">
         <div className="border-4 border-black shadow-brutal bg-white hover:shadow-brutal-hover transition-shadow duration-200">
           <div className="relative overflow-hidden border-b-4 border-black">
-            <div className="aspect-[16/10] bg-gray-200 flex items-center justify-center relative">
+            <div className="bg-gray-200 relative">
               {image.startsWith("/") ? (
                 <Image
                   src={image}
                   alt={title}
-                  fill
-                  className="object-contain bg-black"
+                  width={0}
+                  height={0}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  className="w-full h-auto"
                 />
               ) : (
-                <div className="absolute inset-0" style={{ backgroundColor: image }} />
+                <div className="aspect-[16/10]" style={{ backgroundColor: image }} />
               )}
               {!image.startsWith("/") && (
-                <span className="relative z-10 font-display font-bold text-white text-lg uppercase tracking-wide opacity-80">
+                <span className="absolute inset-0 z-10 flex items-center justify-center font-display font-bold text-white text-lg uppercase tracking-wide opacity-80">
                   {title.split(" ")[0]}
                 </span>
               )}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              {!image.startsWith("/") && <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />}
             </div>
 
             <div className="absolute top-3 right-3">
