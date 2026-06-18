@@ -124,15 +124,14 @@ export default function ProjectDetailContent({ project }: Props) {
                       i === 0 ? "sm:col-span-2" : ""
                     }`}
                   >
-                    <div className="relative aspect-video">
-                      <Image
-                        src={img}
-                        alt={`${project.title} - image ${i + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
-                      />
-                    </div>
+                    <Image
+                      src={img}
+                      alt={`${project.title} - image ${i + 1}`}
+                      width={0}
+                      height={0}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+                      className="w-full h-auto"
+                    />
                   </motion.div>
                 ))}
               </motion.div>
