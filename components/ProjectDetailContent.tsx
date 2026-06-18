@@ -114,26 +114,65 @@ export default function ProjectDetailContent({ project }: Props) {
                 variants={container}
                 initial="hidden"
                 animate="show"
-                className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
               >
-                {project.images.map((img, i) => (
-                  <motion.div
-                    key={i}
-                    variants={galleryItem}
-                    className={`border-[3px] sm:border-4 border-black shadow-brutal overflow-hidden bg-black ${
-                      i === 0 ? "sm:col-span-2" : ""
-                    }`}
-                  >
-                    <Image
-                      src={img}
-                      alt={`${project.title} - image ${i + 1}`}
-                      width={0}
-                      height={0}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
-                      className="w-full h-auto"
-                    />
-                  </motion.div>
-                ))}
+                {/* Mobile: single column stack */}
+                <div className="sm:hidden space-y-3 sm:space-y-4">
+                  {project.images.map((img, i) => (
+                    <motion.div
+                      key={i}
+                      variants={galleryItem}
+                      className="border-[3px] sm:border-4 border-black shadow-brutal overflow-hidden"
+                    >
+                      <Image
+                        src={img}
+                        alt={`${project.title} - image ${i + 1}`}
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        className="w-full h-auto"
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Desktop: first image full-width, rest masonry */}
+                <div className="hidden sm:block">
+                  {project.images.length > 0 && (
+                    <motion.div
+                      variants={galleryItem}
+                      className="border-[3px] sm:border-4 border-black shadow-brutal overflow-hidden mb-3 sm:mb-4"
+                    >
+                      <Image
+                        src={project.images[0]}
+                        alt={`${project.title} - image 1`}
+                        width={0}
+                        height={0}
+                        sizes="(max-width: 1024px) 90vw, 1200px"
+                        className="w-full h-auto"
+                      />
+                    </motion.div>
+                  )}
+                  {project.images.length > 1 && (
+                    <div className="columns-2 gap-3 sm:gap-4">
+                      {project.images.slice(1).map((img, i) => (
+                        <motion.div
+                          key={i}
+                          variants={galleryItem}
+                          className="border-[3px] sm:border-4 border-black shadow-brutal overflow-hidden break-inside-avoid mb-3 sm:mb-4"
+                        >
+                          <Image
+                            src={img}
+                            alt={`${project.title} - image ${i + 2}`}
+                            width={0}
+                            height={0}
+                            sizes="50vw"
+                            className="w-full h-auto"
+                          />
+                        </motion.div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </motion.div>
             </motion.div>
           )}
