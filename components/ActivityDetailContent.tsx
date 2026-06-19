@@ -25,7 +25,7 @@ export default function ActivityDetailContent({ article }: Props) {
       variants={container}
       initial="hidden"
       animate="show"
-      className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20"
+      className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20"
     >
       <motion.div variants={item}>
         <Link
