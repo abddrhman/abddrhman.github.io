@@ -8,6 +8,14 @@ export const metadata: Metadata = {
 };
 
 export default function ActivityPage() {
+  const total = articles.length;
+
+  function getSpan(index: number): string {
+    if (total === 2) return "";
+    if (total === 1 || index % 3 === 0) return "md:col-span-2";
+    return "";
+  }
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20">
       <div className="flex items-center gap-3 sm:gap-4 mb-2">
@@ -39,12 +47,7 @@ export default function ActivityPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
         {articles.map((article, index) => (
-          <div
-            key={article.slug}
-            className={`${index === 0 ? "md:col-span-2" : ""} ${
-              index === 3 ? "md:col-span-2" : ""
-            }`}
-          >
+          <div key={article.slug} className={getSpan(index)}>
             <ActivityCard {...article} />
           </div>
         ))}
