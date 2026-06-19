@@ -43,14 +43,15 @@ export default function ActivityDetailContent({ article }: Props) {
       <motion.div variants={item} className="border-[3px] sm:border-4 border-black bg-white shadow-brutal overflow-hidden">
         <motion.div
           variants={item}
-          className="h-48 sm:h-80 lg:h-96 relative border-b-[3px] sm:border-b-4 border-black bg-black"
+          className="border-b-[3px] sm:border-b-4 border-black bg-black"
         >
           <Image
             src={article.image}
             alt={article.title}
-            fill
-            className="object-cover"
+            width={0}
+            height={0}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 960px"
+            className="w-full h-auto"
           />
         </motion.div>
 
@@ -81,20 +82,44 @@ export default function ActivityDetailContent({ article }: Props) {
           </motion.p>
 
           <motion.div variants={item} className="space-y-4 sm:space-y-6">
-            {article.content.map((paragraph, i) => (
-              <motion.div
-                key={i}
-                variants={item}
-                className="flex gap-2 sm:gap-4"
-              >
-                <span className="font-display font-bold text-accent-500 text-[10px] sm:text-sm shrink-0 mt-0.5 sm:mt-1">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="font-body text-sm sm:text-lg text-gray-700 leading-relaxed">
-                  {paragraph}
-                </p>
-              </motion.div>
-            ))}
+            {(() => {
+              let textIndex = 0;
+              return article.content.map((block, i) => {
+                if (block.type === "text") {
+                  textIndex++;
+                  return (
+                    <motion.div
+                      key={i}
+                      variants={item}
+                      className="flex gap-2 sm:gap-4"
+                    >
+                      <span className="font-display font-bold text-accent-500 text-[10px] sm:text-sm shrink-0 mt-0.5 sm:mt-1">
+                        {String(textIndex).padStart(2, "0")}
+                      </span>
+                      <p className="font-body text-sm sm:text-lg text-gray-700 leading-relaxed">
+                        {block.body}
+                      </p>
+                    </motion.div>
+                  );
+                }
+                return (
+                  <motion.div
+                    key={i}
+                    variants={item}
+                    className="border-[3px] sm:border-4 border-black shadow-brutal overflow-hidden"
+                  >
+                    <Image
+                      src={block.src}
+                      alt={block.alt}
+                      width={0}
+                      height={0}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 960px"
+                      className="w-full h-auto"
+                    />
+                  </motion.div>
+                );
+              });
+            })()}
           </motion.div>
         </div>
       </motion.div>
