@@ -71,10 +71,10 @@ export default function Footer() {
 
         <div className="mt-6 pt-4 border-t-2 border-black flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="font-body text-sm font-medium">
-            &copy; {new Date().getFullYear()} qynn. all rights reserved.
+            &copy; {new Date().getFullYear()} Hasan Abdurrahman
           </p>
           <p className="font-body text-xs text-gray-500">
-            built with grit & pixel dust
+            Made with NextJS
           </p>
         </div>
       </div>
