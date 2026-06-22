@@ -54,7 +54,7 @@ export default function Footer() {
               />
             </div>
             <span className="font-display font-bold text-sm uppercase tracking-wide text-[var(--text-primary)]">
-              qynn
+              HSN
             </span>
           </div>
 
