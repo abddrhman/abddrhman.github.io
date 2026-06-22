@@ -17,14 +17,14 @@ export default function SkillBar({ name, level }: SkillBarProps) {
       className="mb-5"
     >
       <div className="flex items-center justify-between mb-2">
-        <span className="font-display font-bold text-base uppercase tracking-wide">
+        <span className="font-display font-bold text-base uppercase tracking-wide text-[var(--text-primary)]">
           {name}
         </span>
-        <span className="font-display font-bold text-lg text-accent-500 border-2 border-black w-10 h-10 flex items-center justify-center bg-white shadow-brutal">
+        <span className="font-display font-bold text-lg text-accent-500 border-2 border-[var(--border-color)] w-10 h-10 flex items-center justify-center bg-[var(--bg-secondary)] shadow-brutal">
           {level}
         </span>
       </div>
-      <div className="relative h-7 border-2 border-black bg-white shadow-brutal">
+      <div className="relative h-7 border-2 border-[var(--border-color)] bg-[var(--bg-secondary)] shadow-brutal">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${level}%` }}

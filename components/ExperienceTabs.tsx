@@ -21,29 +21,29 @@ export default function ExperienceTabs({ education, experience }: ExperienceTabs
   const [active, setActive] = useState<"education" | "experience">("education");
 
   return (
-    <div className="border-[3px] sm:border-4 border-black shadow-brutal bg-white p-5 sm:p-8">
-      <div className="flex items-center gap-1 sm:gap-2 mb-4 sm:mb-6 border-b-2 border-black pb-0">
+    <div className="border-[3px] sm:border-4 border-[var(--border-color)] shadow-brutal bg-[var(--bg-secondary)] p-5 sm:p-8 transition-colors duration-300">
+      <div className="flex items-center gap-1 sm:gap-2 mb-4 sm:mb-6 border-b-2 border-[var(--border-color)] pb-0">
         <button
           onClick={() => setActive("education")}
-          className={`font-display font-bold text-xs sm:text-sm uppercase tracking-wider px-4 py-2 sm:px-6 sm:py-3 border-2 border-black -mb-[2px] transition-colors ${
+          className={`font-display font-bold text-xs sm:text-sm uppercase tracking-wider px-4 py-2 sm:px-6 sm:py-3 border-2 border-[var(--border-color)] -mb-[2px] transition-colors ${
             active === "education"
               ? "bg-accent-500 text-white border-accent-500"
-              : "bg-white text-black hover:bg-accent-100"
+              : "bg-[var(--bg-secondary)] text-[var(--text-primary)] hover:bg-accent-100 dark:hover:bg-[var(--bg-tertiary)]"
           }`}
         >
           education
         </button>
         <button
           onClick={() => setActive("experience")}
-          className={`font-display font-bold text-xs sm:text-sm uppercase tracking-wider px-4 py-2 sm:px-6 sm:py-3 border-2 border-black -mb-[2px] transition-colors ${
+          className={`font-display font-bold text-xs sm:text-sm uppercase tracking-wider px-4 py-2 sm:px-6 sm:py-3 border-2 border-[var(--border-color)] -mb-[2px] transition-colors ${
             active === "experience"
               ? "bg-accent-500 text-white border-accent-500"
-              : "bg-white text-black hover:bg-accent-100"
+              : "bg-[var(--bg-secondary)] text-[var(--text-primary)] hover:bg-accent-100 dark:hover:bg-[var(--bg-tertiary)]"
           }`}
         >
           experience
         </button>
-        <div className="flex-1 border-b-2 border-black" />
+        <div className="flex-1 border-b-2 border-[var(--border-color)]" />
       </div>
 
       <AnimatePresence mode="wait">

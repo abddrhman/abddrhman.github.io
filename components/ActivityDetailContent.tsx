@@ -30,7 +30,7 @@ export default function ActivityDetailContent({ article }: Props) {
       <motion.div variants={item}>
         <Link
           href="/activity"
-          className="inline-flex items-center gap-2 font-display font-bold text-xs sm:text-sm uppercase tracking-wider border-2 border-black px-3 py-2 sm:px-4 sm:py-2 bg-white hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors shadow-brutal mb-6 sm:mb-8 group"
+          className="inline-flex items-center gap-2 font-display font-bold text-xs sm:text-sm uppercase tracking-wider border-2 border-[var(--border-color)] px-3 py-2 sm:px-4 sm:py-2 bg-[var(--bg-secondary)] hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors shadow-brutal mb-6 sm:mb-8 group"
         >
           <svg width="14" height="14" className="sm:w-4 sm:h-4 group-hover:-translate-x-1 transition-transform shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 12H5" />
@@ -40,10 +40,10 @@ export default function ActivityDetailContent({ article }: Props) {
         </Link>
       </motion.div>
 
-      <motion.div variants={item} className="border-[3px] sm:border-4 border-black bg-white shadow-brutal overflow-hidden">
+      <motion.div variants={item} className="border-[3px] sm:border-4 border-[var(--border-color)] bg-[var(--bg-secondary)] shadow-brutal overflow-hidden transition-colors duration-300">
         <motion.div
           variants={item}
-          className="border-b-[3px] sm:border-b-4 border-black bg-black"
+          className="border-b-[3px] sm:border-b-4 border-[var(--border-color)] bg-black dark:bg-gray-900"
         >
           <Image
             src={article.image}
@@ -57,17 +57,17 @@ export default function ActivityDetailContent({ article }: Props) {
 
         <div className="p-4 sm:p-8 lg:p-10">
           <motion.div variants={item} className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-            <span className="font-display font-bold text-[10px] sm:text-xs uppercase tracking-wider bg-black text-white px-2 py-1 sm:px-3 sm:py-1.5">
+            <span className="font-display font-bold text-[10px] sm:text-xs uppercase tracking-wider bg-black dark:bg-gray-900 text-white px-2 py-1 sm:px-3 sm:py-1.5">
               {article.category}
             </span>
-            <span className="font-body text-xs sm:text-sm font-medium text-gray-500">
+            <span className="font-body text-xs sm:text-sm font-medium text-[var(--text-muted)]">
               {article.date}
             </span>
           </motion.div>
 
           <motion.h1
             variants={item}
-            className="font-display font-bold text-2xl sm:text-5xl lg:text-6xl uppercase leading-[0.9] tracking-tighter mb-2"
+            className="font-display font-bold text-2xl sm:text-5xl lg:text-6xl uppercase leading-[0.9] tracking-tighter mb-2 text-[var(--text-primary)]"
           >
             {article.title}
           </motion.h1>
@@ -76,7 +76,7 @@ export default function ActivityDetailContent({ article }: Props) {
 
           <motion.p
             variants={item}
-            className="font-body text-sm sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 border-l-[3px] sm:border-l-4 border-accent-500 pl-3 sm:pl-4 italic"
+            className="font-body text-sm sm:text-lg text-[var(--text-secondary)] leading-relaxed mb-6 sm:mb-8 border-l-[3px] sm:border-l-4 border-accent-500 pl-3 sm:pl-4 italic"
           >
             {article.excerpt}
           </motion.p>
@@ -96,7 +96,7 @@ export default function ActivityDetailContent({ article }: Props) {
                       <span className="font-display font-bold text-accent-500 text-[10px] sm:text-sm shrink-0 mt-0.5 sm:mt-1">
                         {String(textIndex).padStart(2, "0")}
                       </span>
-                      <p className="font-body text-sm sm:text-lg text-gray-700 leading-relaxed">
+                      <p className="font-body text-sm sm:text-lg text-[var(--text-primary)] leading-relaxed">
                         {block.body}
                       </p>
                     </motion.div>
@@ -106,7 +106,7 @@ export default function ActivityDetailContent({ article }: Props) {
                   <motion.div
                     key={i}
                     variants={item}
-                    className="border-[3px] sm:border-4 border-black shadow-brutal overflow-hidden"
+                    className="border-[3px] sm:border-4 border-[var(--border-color)] shadow-brutal overflow-hidden"
                   >
                     <Image
                       src={block.src}
@@ -127,7 +127,7 @@ export default function ActivityDetailContent({ article }: Props) {
       <motion.div variants={item} className="mt-6 sm:mt-8 text-center">
         <Link
           href="/activity"
-          className="inline-flex items-center gap-2 font-display font-bold text-xs sm:text-sm uppercase tracking-wider bg-black text-white px-6 py-3 sm:px-8 sm:py-4 border-2 border-black hover:bg-accent-500 hover:border-accent-500 transition-colors shadow-brutal"
+          className="inline-flex items-center gap-2 font-display font-bold text-xs sm:text-sm uppercase tracking-wider bg-black dark:bg-gray-900 text-white px-6 py-3 sm:px-8 sm:py-4 border-2 border-[var(--border-color)] hover:bg-accent-500 hover:border-accent-500 transition-colors shadow-brutal"
         >
           <svg width="14" height="14" className="sm:w-4 sm:h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 12H5" />

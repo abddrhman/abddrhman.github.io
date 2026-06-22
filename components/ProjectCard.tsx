@@ -31,9 +31,9 @@ export default function ProjectCard({
       className="block group"
     >
       <Link href={`/project/${slug}`} className="block">
-        <div className="border-4 border-black shadow-brutal bg-white hover:shadow-brutal-hover transition-shadow duration-200">
-          <div className="relative overflow-hidden border-b-4 border-black">
-            <div className="bg-gray-200 relative">
+        <div className="border-4 border-[var(--border-color)] shadow-brutal bg-[var(--bg-secondary)] hover:shadow-brutal-hover transition-shadow duration-200">
+          <div className="relative overflow-hidden border-b-4 border-[var(--border-color)]">
+            <div className="bg-gray-200 dark:bg-gray-800 relative">
               {image.startsWith("/") ? (
                 <Image
                   src={image}
@@ -55,12 +55,12 @@ export default function ProjectCard({
             </div>
 
             <div className="absolute top-3 right-3">
-              <span className="bg-black text-white font-display font-bold text-xs uppercase tracking-wider px-3 py-1.5">
+              <span className="bg-black dark:bg-gray-900 text-white font-display font-bold text-xs uppercase tracking-wider px-3 py-1.5">
                 {category}
               </span>
             </div>
 
-            <div className="absolute top-3 left-3 w-8 h-8 bg-accent-500 border-2 border-black flex items-center justify-center">
+            <div className="absolute top-3 left-3 w-8 h-8 bg-accent-500 border-2 border-[var(--border-color)] flex items-center justify-center">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                 <polyline points="15 3 21 3 21 9" />
@@ -70,17 +70,17 @@ export default function ProjectCard({
           </div>
 
           <div className="p-5">
-            <h3 className="font-display font-bold text-xl uppercase tracking-tight group-hover:text-accent-500 transition-colors">
+            <h3 className="font-display font-bold text-xl uppercase tracking-tight group-hover:text-accent-500 transition-colors text-[var(--text-primary)]">
               {title}
             </h3>
-            <p className="font-body text-sm mt-2 text-gray-600 leading-relaxed">
+            <p className="font-body text-sm mt-2 text-[var(--text-secondary)] leading-relaxed">
               {description}
             </p>
             <div className="flex flex-wrap gap-2 mt-4">
               {tech.map((t) => (
                 <span
                   key={t}
-                  className="font-display font-bold text-xs uppercase tracking-wider px-3 py-1.5 border-2 border-black bg-accent-100 text-accent-700"
+                  className="font-display font-bold text-xs uppercase tracking-wider px-3 py-1.5 border-2 border-[var(--border-color)] bg-accent-100 text-accent-700 dark:bg-accent-900/50 dark:text-accent-300"
                 >
                   {t}
                 </span>

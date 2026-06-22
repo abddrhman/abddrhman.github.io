@@ -244,7 +244,7 @@ export default function HeroSection() {
                   })}
                 </motion.div>
               </div>
-              <div className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 w-[calc(100%-8px)] h-[calc(100%-8px)] border-[3px] sm:border-4 border-black bg-[#f8f5f0] -z-10" />
+              <div className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 w-[calc(100%-8px)] h-[calc(100%-8px)] border-[3px] sm:border-4 border-[var(--border-color)] bg-[var(--bg-primary)] -z-10" />
             </div>
           </motion.div>
 
@@ -254,7 +254,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-7"
           >
-            <h1 className="font-display font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tighter text-black -ml-1">
+            <h1 className="font-display font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.85] tracking-tighter text-[var(--text-primary)] -ml-1">
               Hasan
               <span className="block text-accent-500">.</span>
             </h1>
@@ -266,7 +266,7 @@ export default function HeroSection() {
               <span className="absolute -bottom-1 left-2 w-full h-0.5 sm:h-1 bg-accent-500" />
             </div>
 
-            <p className="mt-4 sm:mt-6 font-body text-base sm:text-xl text-gray-700 max-w-lg leading-relaxed">
+            <p className="mt-4 sm:mt-6 font-body text-base sm:text-xl text-[var(--text-secondary)] max-w-lg leading-relaxed">
 Hi there! I'm Hasan, a student at Batam State Polytechnic with a passion for technology, gaming, and football.            </p>
 
             <motion.div
@@ -283,7 +283,7 @@ Hi there! I'm Hasan, a student at Batam State Polytechnic with a passion for tec
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, rotate: -3 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-black flex items-center justify-center bg-white hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors shadow-brutal"
+                  className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-[var(--border-color)] flex items-center justify-center bg-[var(--bg-secondary)] hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors shadow-brutal"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -299,32 +299,32 @@ Hi there! I'm Hasan, a student at Batam State Polytechnic with a passion for tec
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 sm:mt-20 lg:mt-24"
         >
-          <div className="border-[3px] sm:border-4 border-black shadow-brutal bg-white relative overflow-hidden">
+          <div className="border-[3px] sm:border-4 border-[var(--border-color)] shadow-brutal bg-[var(--bg-secondary)] relative overflow-hidden transition-colors duration-300">
             <div className="h-1.5 sm:h-2 bg-accent-500 w-full" />
             <div className="p-4 sm:p-8">
               <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-accent-500 border border-black shrink-0" />
-                <h2 className="font-display font-bold text-base sm:text-2xl uppercase tracking-tight">
+                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-accent-500 border border-[var(--border-color)] shrink-0" />
+                <h2 className="font-display font-bold text-base sm:text-2xl uppercase tracking-tight text-[var(--text-primary)]">
                   what i&apos;m doing now
                 </h2>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6">
-                <div className="border-2 border-black p-3 sm:p-4 bg-accent-50">
+                <div className="border-2 border-[var(--border-color)] p-3 sm:p-4 bg-[var(--bg-tertiary)]">
                   <span className="font-display font-bold text-xs sm:text-sm uppercase text-accent-600">project</span>
-                  <p className="font-body font-semibold text-sm sm:text-base mt-1">
+                  <p className="font-body font-semibold text-sm sm:text-base mt-1 text-[var(--text-primary)]">
                     <TypewriterLoop text="Development of an Internet of Things-Based Smart Glove as a Sign Language-to-Speech Translator" hold={10000} />
                   </p>
                 </div>
-                <div className="border-2 border-black p-3 sm:p-4 bg-white">
+                <div className="border-2 border-[var(--border-color)] p-3 sm:p-4 bg-[var(--bg-secondary)]">
                   <span className="font-display font-bold text-xs sm:text-sm uppercase text-accent-600">academic</span>
-                  <p className="font-body font-semibold text-sm sm:text-base mt-1">
+                  <p className="font-body font-semibold text-sm sm:text-base mt-1 text-[var(--text-primary)]">
                     <TypewriterLoop text="A fourth-semester Software Engineering student." hold={10000} />
                   </p>
                 </div>
-                <div className="border-2 border-black p-3 sm:p-4 bg-accent-50">
+                <div className="border-2 border-[var(--border-color)] p-3 sm:p-4 bg-[var(--bg-tertiary)]">
                   <span className="font-display font-bold text-xs sm:text-sm uppercase text-accent-600">organization</span>
-                  <p className="font-body font-semibold text-sm sm:text-base mt-1">
+                  <p className="font-body font-semibold text-sm sm:text-base mt-1 text-[var(--text-primary)]">
                     <TypewriterLoop text={'Head of Media and Communication Division at the Information Technology Student Association of Batam State Polytechnic'} hold={10000} />
                   </p>
                 </div>
