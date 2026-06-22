@@ -32,7 +32,7 @@ export default function Navbar() {
               />
             </div>
             <span className="font-display font-bold text-xl uppercase tracking-tight group-hover:text-accent-500 transition-colors text-[var(--text-primary)]">
-              qynn
+              HSN
             </span>
           </Link>
 
