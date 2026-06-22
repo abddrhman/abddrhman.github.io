@@ -36,20 +36,19 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="font-display font-bold text-base uppercase tracking-wide relative group text-[var(--text-primary)]"
-              >
-                {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-1 bg-accent-500 group-hover:w-full transition-all duration-200" />
-              </Link>
-            ))}
-          </nav>
-
           <div className="flex items-center gap-3">
+            <nav className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-display font-bold text-base uppercase tracking-wide relative group text-[var(--text-primary)]"
+                >
+                  {link.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-1 bg-accent-500 group-hover:w-full transition-all duration-200" />
+                </Link>
+              ))}
+            </nav>
             <button
               onClick={toggle}
               className="w-10 h-10 border-2 border-[var(--border-color)] flex items-center justify-center bg-[var(--bg-secondary)] hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors shadow-brutal"
