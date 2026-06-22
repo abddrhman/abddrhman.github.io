@@ -48,7 +48,7 @@ export default function ProjectDetailContent({ project }: Props) {
               <path d="M19 12H5" />
               <path d="m12 19-7-7 7-7" />
             </svg>
-            home
+            back
           </Link>
         </motion.div>
       )}
