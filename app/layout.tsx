@@ -18,13 +18,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "qynn | design & code",
-    template: "%s | qynn",
+    default: "Hasan Abdurrahman",
+    template: "Abdurrahman | %s",
   },
-  description: "Portfolio of qynn — Software Engineer Student. Neo brutalism meets the web.",
+  description: "Portfolio of Hasan Abdurrahman — Software Engineer Student. Neo brutalism meets the web.",
   openGraph: {
-    title: "qynn | design & code",
-    description: "Portfolio of qynn — Software Engineer Student.",
+    title: "Hasan Abdurrahman",
+    description: "Portfolio of Hasan Abdurrahman — Software Engineer Student.",
     type: "website",
   },
 };
