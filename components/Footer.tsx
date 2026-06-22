@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const socials = [
@@ -43,8 +44,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-accent-500 border-2 border-[var(--border-color)] flex items-center justify-center">
-              <span className="text-white font-display font-bold text-sm">Q</span>
+            <div className="w-8 h-8 flex items-center justify-center">
+              <Image
+                src="/My Logo Gwej 1.png"
+                alt="qynn logo"
+                width={32}
+                height={32}
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="font-display font-bold text-sm uppercase tracking-wide text-[var(--text-primary)]">
               qynn
