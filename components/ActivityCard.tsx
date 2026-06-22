@@ -27,8 +27,8 @@ export default function ActivityCard({
     >
       <Link href={`/activity/${slug}`} className="block group">
         <div className="border-4 border-black shadow-brutal bg-white hover:shadow-brutal-hover transition-shadow duration-200 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-16 h-16 bg-accent-500 border-l-4 border-b-4 border-black flex items-center justify-center">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 bg-accent-500 border-l-4 border-b-4 border-black flex items-center justify-center">
+            <svg width="16" height="16" className="sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M7 7h10v10" />
               <path d="M7 17 17 7" />
             </svg>
