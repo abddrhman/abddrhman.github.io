@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     template: "Abdurrahman | %s",
   },
   description: "Portfolio of Hasan Abdurrahman — Software Engineer Student. Neo brutalism meets the web.",
+  icons: {
+    icon: "/My Logo Gwej.jpg",
+  },
   openGraph: {
     title: "Hasan Abdurrahman",
     description: "Portfolio of Hasan Abdurrahman — Software Engineer Student.",
