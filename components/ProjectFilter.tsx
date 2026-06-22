@@ -56,7 +56,7 @@ export default function ProjectFilter({ projects, categories }: Props) {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
             >
-              <ProjectCard {...project} />
+              <ProjectCard from="project" {...project} />
             </motion.div>
           ))}
         </AnimatePresence>

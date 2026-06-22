@@ -11,6 +11,7 @@ interface ProjectCardProps {
   image: string;
   category: string;
   slug: string;
+  from?: string;
 }
 
 export default function ProjectCard({
@@ -20,6 +21,7 @@ export default function ProjectCard({
   image,
   category,
   slug,
+  from,
 }: ProjectCardProps) {
   return (
     <motion.div
@@ -30,7 +32,7 @@ export default function ProjectCard({
       whileHover={{ y: -4 }}
       className="block group"
     >
-      <Link href={`/project/${slug}`} className="block">
+      <Link href={`/project/${slug}${from ? `?from=${from}` : ""}`} className="block">
         <div className="border-4 border-[var(--border-color)] shadow-brutal bg-[var(--bg-secondary)] hover:shadow-brutal-hover transition-shadow duration-200">
           <div className="relative overflow-hidden border-b-4 border-[var(--border-color)]">
             <div className="bg-gray-200 dark:bg-gray-800 relative">
