@@ -54,6 +54,29 @@ export const projects: Project[] = [
     ],
     link: "",
   },
+  {
+    title: "Virtual Event Check-In",
+    description: "The Online Event Attendance App is a digital solution designed to simplify attendance recording for various types of online events, such as webinars, workshops, seminars, and conferences. This app enables event organizers to manage attendee attendance effectively and efficiently..",
+    tech: ["PHP", "MYSQL", "Boostrap", "HTML", "Figma"],
+    image: "/vec/cover.png",
+    category: "web",
+    slug: "virtual-event-check-in",
+    images: [
+      "/vec/homepage.png",
+      "/vec/dashboard.png",
+      "/vec/list-absensi.png",
+      "/vec/absensi.png",
+      "/vec/sertifikat.png",
+      "/vec/poster.png",
+    ],
+    details: [
+      "Online Event Attendance Application is a digital solution developed to streamline and modernize the process of managing participant attendance for various types of online events, including webinars, workshops, seminars, training sessions, and conferences. The application was created to address common challenges faced by event organizers, such as manual attendance tracking, inaccurate participant records, and the difficulty of monitoring attendance data in real time. By providing a centralized and user-friendly platform, the system enables organizers to efficiently record, monitor, and manage participant attendance throughout the event lifecycle.",
+      "The application offers an intuitive interface that simplifies the attendance process for both organizers and participants. Organizers can create and manage events, monitor participant attendance, access attendance records, and generate reports that can be used for documentation and evaluation purposes. The platform is designed with a focus on usability, accessibility, and efficiency, ensuring that event management processes can be carried out smoothly while minimizing administrative workload. In addition, the system aims to enhance the overall experience of online event management by providing accurate and organized attendance data.",
+      "In this project, I was responsible for multiple aspects of development, serving as both a UI/UX Designer and a Web Developer. As a UI/UX Designer, I conducted user-centered design processes, including interface planning, wireframing, prototyping, and creating visually appealing and intuitive user experiences to ensure ease of use and accessibility. I focused on designing a clean and responsive interface that allows users to navigate the application efficiently while maintaining consistency across different devices.",  
+      "As a Web Developer, I was involved in translating the design into a functional web application by implementing the frontend and backend components, integrating system features, and ensuring that the application operates reliably and efficiently. I contributed to developing core functionalities related to attendance management, user interactions, and data processing, while also emphasizing maintainability, responsiveness, and overall system performance. Through this project, I gained valuable experience in combining design principles with software development practices to deliver a comprehensive digital solution that improves the effectiveness and efficiency of online event attendance management.",
+    ],
+    link: "",
+  }
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
