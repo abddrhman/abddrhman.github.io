@@ -26,8 +26,8 @@ export default function ActivityCard({
       transition={{ duration: 0.4 }}
     >
       <Link href={`/activity/${slug}`} className="block group">
-        <div className="border-4 border-black shadow-brutal bg-white hover:shadow-brutal-hover transition-shadow duration-200 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 bg-accent-500 border-l-4 border-b-4 border-black flex items-center justify-center">
+        <div className="border-4 border-[var(--border-color)] shadow-brutal bg-[var(--bg-secondary)] hover:shadow-brutal-hover transition-shadow duration-200 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 bg-accent-500 border-l-4 border-b-4 border-[var(--border-color)] flex items-center justify-center">
             <svg width="16" height="16" className="sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M7 7h10v10" />
               <path d="M7 17 17 7" />
@@ -36,21 +36,21 @@ export default function ActivityCard({
 
           <div className="p-4 sm:p-6">
             <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-              <span className="font-display font-bold text-[10px] sm:text-xs uppercase tracking-wider bg-black text-white px-2 py-1 sm:px-3 sm:py-1.5">
+              <span className="font-display font-bold text-[10px] sm:text-xs uppercase tracking-wider bg-black dark:bg-gray-900 text-white px-2 py-1 sm:px-3 sm:py-1.5">
                 {category}
               </span>
-              <span className="font-body text-xs sm:text-sm font-medium text-gray-500">
+              <span className="font-body text-xs sm:text-sm font-medium text-[var(--text-muted)]">
                 {date}
               </span>
             </div>
 
-            <h3 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-tight group-hover:text-accent-500 transition-colors">
+            <h3 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-tight group-hover:text-accent-500 transition-colors text-[var(--text-primary)]">
               {title}
             </h3>
 
             <div className="w-8 sm:w-12 h-0.5 sm:h-1 bg-accent-500 my-2 sm:my-3" />
 
-            <p className="font-body text-xs sm:text-sm text-gray-600 leading-relaxed">
+            <p className="font-body text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
               {excerpt}
             </p>
 

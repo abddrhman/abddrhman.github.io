@@ -65,12 +65,12 @@ export default function SkillsGrid({ skills }: SkillsGridProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, delay: i * 0.05 }}
-          className="border-[3px] sm:border-4 border-black shadow-brutal bg-white p-3 sm:p-5 flex flex-col items-center justify-center text-center hover:bg-accent-50 hover:-translate-y-1 transition-all group"
+          className="border-[3px] sm:border-4 border-[var(--border-color)] shadow-brutal bg-[var(--bg-secondary)] p-3 sm:p-5 flex flex-col items-center justify-center text-center hover:bg-accent-50 dark:hover:bg-[var(--bg-tertiary)] hover:-translate-y-1 transition-all group"
         >
-          <div className="text-black group-hover:text-accent-500 transition-colors">
+          <div className="text-[var(--text-primary)] group-hover:text-accent-500 transition-colors">
             {iconMap[name] || <FontAwesomeIcon icon={faCode} className="w-8 h-8 sm:w-10 sm:h-10" />}
           </div>
-          <span className="font-display font-bold text-[10px] sm:text-xs uppercase tracking-wide mt-2 sm:mt-3 leading-tight">
+          <span className="font-display font-bold text-[10px] sm:text-xs uppercase tracking-wide mt-2 sm:mt-3 leading-tight text-[var(--text-primary)]">
             {name}
           </span>
         </motion.div>

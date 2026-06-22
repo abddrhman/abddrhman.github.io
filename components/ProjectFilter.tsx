@@ -22,10 +22,10 @@ export default function ProjectFilter({ projects, categories }: Props) {
       <div className="flex items-center gap-2 sm:gap-3 mb-8 sm:mb-12 flex-wrap">
         <button
           onClick={() => setActive("all")}
-          className={`font-display font-bold text-[10px] sm:text-xs uppercase tracking-wider px-3 py-1.5 sm:px-4 sm:py-2 border-2 border-black transition-colors ${
+          className={`font-display font-bold text-[10px] sm:text-xs uppercase tracking-wider px-3 py-1.5 sm:px-4 sm:py-2 border-2 border-[var(--border-color)] transition-colors ${
             active === "all"
-              ? "bg-black text-white"
-              : "bg-white hover:bg-accent-500 hover:text-white hover:border-accent-500"
+              ? "bg-black dark:bg-gray-900 text-white"
+              : "bg-[var(--bg-secondary)] hover:bg-accent-500 hover:text-white hover:border-accent-500 text-[var(--text-primary)]"
           }`}
         >
           all
@@ -34,10 +34,10 @@ export default function ProjectFilter({ projects, categories }: Props) {
           <button
             key={cat}
             onClick={() => setActive(cat)}
-            className={`font-display font-bold text-[10px] sm:text-xs uppercase tracking-wider px-3 py-1.5 sm:px-4 sm:py-2 border-2 border-black transition-colors ${
+            className={`font-display font-bold text-[10px] sm:text-xs uppercase tracking-wider px-3 py-1.5 sm:px-4 sm:py-2 border-2 border-[var(--border-color)] transition-colors ${
               active === cat
-                ? "bg-black text-white"
-                : "bg-white hover:bg-accent-500 hover:text-white hover:border-accent-500"
+                ? "bg-black dark:bg-gray-900 text-white"
+                : "bg-[var(--bg-secondary)] hover:bg-accent-500 hover:text-white hover:border-accent-500 text-[var(--text-primary)]"
             }`}
           >
             {cat}

@@ -39,14 +39,14 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t-4 border-black bg-[#f8f5f0] mt-20">
+    <footer className="border-t-4 border-[var(--border-color)] bg-[var(--bg-primary)] mt-20 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-accent-500 border-2 border-black flex items-center justify-center">
+            <div className="w-8 h-8 bg-accent-500 border-2 border-[var(--border-color)] flex items-center justify-center">
               <span className="text-white font-display font-bold text-sm">Q</span>
             </div>
-            <span className="font-display font-bold text-sm uppercase tracking-wide">
+            <span className="font-display font-bold text-sm uppercase tracking-wide text-[var(--text-primary)]">
               qynn
             </span>
           </div>
@@ -60,7 +60,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 whileHover={{ rotate: [0, -3, 3, -3, 0] }}
                 transition={{ duration: 0.4 }}
-                className="w-10 h-10 border-2 border-black flex items-center justify-center bg-white hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors shadow-brutal"
+                className="w-10 h-10 border-2 border-[var(--border-color)] flex items-center justify-center bg-[var(--bg-secondary)] hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors shadow-brutal"
                 aria-label={social.label}
               >
                 {social.icon}
@@ -69,11 +69,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 pt-4 border-t-2 border-black flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="font-body text-sm font-medium">
+        <div className="mt-6 pt-4 border-t-2 border-[var(--border-color)] flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="font-body text-sm font-medium text-[var(--text-primary)]">
             &copy; {new Date().getFullYear()} Hasan Abdurrahman
           </p>
-          <p className="font-body text-xs text-gray-500">
+          <p className="font-body text-xs text-[var(--text-muted)]">
             Made with NextJS
           </p>
         </div>

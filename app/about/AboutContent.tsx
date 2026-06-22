@@ -70,8 +70,8 @@ export default function AboutContent() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20">
       <Reveal from="left">
         <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-accent-500 border border-black shrink-0" />
-          <span className="font-display font-bold text-xs sm:text-sm uppercase tracking-widest text-gray-500">
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-accent-500 border border-[var(--border-color)] shrink-0" />
+          <span className="font-display font-bold text-xs sm:text-sm uppercase tracking-widest text-[var(--text-muted)]">
             about
           </span>
         </div>
@@ -80,7 +80,7 @@ export default function AboutContent() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         <div className="lg:col-span-5">
           <Reveal from="left" delay={0.1}>
-            <h1 className="font-display font-bold text-4xl sm:text-6xl md:text-7xl uppercase leading-[0.9] tracking-tighter">
+            <h1 className="font-display font-bold text-4xl sm:text-6xl md:text-7xl uppercase leading-[0.9] tracking-tighter text-[var(--text-primary)]">
               hello,
               <span className="block text-accent-500 mt-1 sm:mt-2">i&apos;m Hasan Abdurrahman</span>
             </h1>
@@ -89,19 +89,19 @@ export default function AboutContent() {
           <div className="mt-6 sm:mt-8 space-y-3 sm:space-y-4">
             <Reveal from="left" delay={0.15}>
               <div className="border-l-[3px] sm:border-l-4 border-accent-500 pl-3 sm:pl-4">
-                <p className="font-body text-base sm:text-lg leading-relaxed">
+                <p className="font-body text-base sm:text-lg leading-relaxed text-[var(--text-primary)]">
                 I am a Software Engineering student at Batam State Polytechnic.I enjoy exploring new technologies, building software projects, and continuously improving my skills in software development. Beyond academics, I spend my free time playing games and following football, which help me stay creative, competitive, and motivated.
                 </p>
               </div>
             </Reveal>
             <Reveal from="left" delay={0.2}>
-              <p className="font-body text-sm sm:text-base text-gray-600 leading-relaxed">
+              <p className="font-body text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
                I'm also a coffee enthusiast who enjoys exploring the world of manual brewing and appreciating the unique flavors of Arabica beans. Brewing coffee has become more than just a daily routine for me it's a hobby t
                hat allows me to slow down, experiment, and enjoy the craftsmanship behind every cup.
               </p>
             </Reveal>
             <Reveal from="left" delay={0.25}>
-              <p className="font-body text-sm sm:text-base text-gray-600 leading-relaxed">
+              <p className="font-body text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed">
                Beyond my passion for technology, I have a strong interest in videography and photography. I enjoy capturing moments, telling stories through visuals, and exploring different perspectives through both photos and videos. These creative hobbies help me express ideas, sharpen my attention to detail, 
                and continuously inspire me in both my personal life and professional journey.
               </p>
@@ -135,11 +135,11 @@ export default function AboutContent() {
 
       <div className="mt-12 sm:mt-20">
         <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-accent-500 border border-black shrink-0" />
-          <h2 className="font-display font-bold text-xl sm:text-4xl uppercase tracking-tight">
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-accent-500 border border-[var(--border-color)] shrink-0" />
+          <h2 className="font-display font-bold text-xl sm:text-4xl uppercase tracking-tight text-[var(--text-primary)]">
             skills
           </h2>
-          <div className="flex-1 h-0.5 sm:h-1 bg-black" />
+          <div className="flex-1 h-0.5 sm:h-1 bg-[var(--border-color)]" />
         </div>
 
         <SkillsGrid skills={skillsData} />
