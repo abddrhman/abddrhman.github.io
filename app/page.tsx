@@ -23,7 +23,7 @@ export default function HomePage() {
         <div className="space-y-6 sm:space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {featured.map((project) => (
-              <ProjectCard key={project.slug} {...project} />
+              <ProjectCard key={project.slug} from="home" {...project} />
             ))}
           </div>
 

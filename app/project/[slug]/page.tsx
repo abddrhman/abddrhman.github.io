@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { projects, getProjectBySlug } from "@/lib/projects";
 import ProjectDetailContent from "@/components/ProjectDetailContent";
 
@@ -26,5 +27,9 @@ export default async function ProjectDetailPage({ params }: Props) {
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
-  return <ProjectDetailContent project={project} />;
+  return (
+    <Suspense fallback={null}>
+      <ProjectDetailContent project={project} />
+    </Suspense>
+  );
 }

@@ -14,9 +14,9 @@ export interface Article {
 
 export const articles: Article[] = [
   {
-    date: "19 jun 2026",
+    date: "15 May 2026",
     title: "Glovoca : Smart Glove for Sign Language",
-    excerpt: "Development of an Internet of Things-Based Smart Glove as a Sign Language-to-Speech Translator — bridging communication barriers with assistive technology.",
+    excerpt: "Development of an Internet of Things-Based Smart Glove as a Sign Language-to-Speech Translator bridging communication barriers with assistive technology.",
     category: "article",
     slug: "glovoca-smart-glove",
     image: "/Glovoca/Glovoca 1.png",

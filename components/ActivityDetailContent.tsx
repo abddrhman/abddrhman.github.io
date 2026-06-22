@@ -27,18 +27,7 @@ export default function ActivityDetailContent({ article }: Props) {
       animate="show"
       className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20"
     >
-      <motion.div variants={item}>
-        <Link
-          href="/activity"
-          className="inline-flex items-center gap-2 font-display font-bold text-xs sm:text-sm uppercase tracking-wider border-2 border-[var(--border-color)] px-3 py-2 sm:px-4 sm:py-2 bg-[var(--bg-secondary)] hover:bg-accent-500 hover:text-white hover:border-accent-500 transition-colors shadow-brutal mb-6 sm:mb-8 group"
-        >
-          <svg width="14" height="14" className="sm:w-4 sm:h-4 group-hover:-translate-x-1 transition-transform shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M19 12H5" />
-            <path d="m12 19-7-7 7-7" />
-          </svg>
-          back to activity
-        </Link>
-      </motion.div>
+
 
       <motion.div variants={item} className="border-[3px] sm:border-4 border-[var(--border-color)] bg-[var(--bg-secondary)] shadow-brutal overflow-hidden transition-colors duration-300">
         <motion.div
@@ -127,13 +116,13 @@ export default function ActivityDetailContent({ article }: Props) {
       <motion.div variants={item} className="mt-6 sm:mt-8 text-center">
         <Link
           href="/activity"
-          className="inline-flex items-center gap-2 font-display font-bold text-xs sm:text-sm uppercase tracking-wider bg-black dark:bg-gray-900 text-white px-6 py-3 sm:px-8 sm:py-4 border-2 border-[var(--border-color)] hover:bg-accent-500 hover:border-accent-500 transition-colors shadow-brutal"
+          className="inline-flex items-center gap-2 font-display font-bold text-xs sm:text-sm uppercase tracking-wider bg-black dark:bg-gray-900 text-white px-6 py-3 sm:px-8 sm:py-4 border-2 border-[var(--border-color)] hover:bg-accent-500 hover:border-accent-500 transition-colors shadow-brutal group"
         >
-          <svg width="14" height="14" className="sm:w-4 sm:h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="14" height="14" className="sm:w-4 sm:h-4 shrink-0 group-hover:-translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 12H5" />
             <path d="m12 19-7-7 7-7" />
           </svg>
-          back to all articles
+          back
         </Link>
       </motion.div>
     </motion.div>
