@@ -33,10 +33,14 @@ jobs:
       - name: Wait 1 minute
         run: sleep 60
       - name: Deploy to hostdata.id via FTP
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq lftp
-          lftp -c "set ftp:ssl-allow no; open -u '${{ secrets.FTP_USERNAME }}','${{ secrets.FTP_PASSWORD }}' ${{ secrets.FTP_SERVER }}; mirror -R ./out/ /"
+          lftp -c "set ftp:ssl-allow no; open -u '$FTP_USERNAME','$FTP_PASSWORD' $FTP_SERVER; mirror -R ./out/ /"
   deploy:
     needs: build
     runs-on: ubuntu-latest
