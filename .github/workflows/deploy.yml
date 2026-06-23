@@ -1,8 +1,8 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages & Hostdata
 
 on:
   push:
-    branches: [main]
+    branches: [main, production]
   workflow_dispatch:
 
 permissions:
@@ -30,6 +30,16 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+      - name: Wait 1 minute
+        run: sleep 60
+      - name: Deploy to hostdata.id via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: /
   deploy:
     needs: build
     runs-on: ubuntu-latest
