@@ -40,7 +40,12 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq lftp
-          lftp -c "set ftp:ssl-allow no; open -u '$FTP_USERNAME','$FTP_PASSWORD' $FTP_SERVER; mirror -R ./out/ /"
+          cat > /tmp/lftp-script << EOF
+          set ftp:ssl-allow no
+          open -u "$FTP_USERNAME","$FTP_PASSWORD" $FTP_SERVER
+          mirror -R ./out/ /
+          EOF
+          lftp -f /tmp/lftp-script
   deploy:
     needs: build
     runs-on: ubuntu-latest
