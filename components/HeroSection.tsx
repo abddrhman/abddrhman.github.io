@@ -267,7 +267,8 @@ export default function HeroSection() {
             </div>
 
             <p className="mt-4 sm:mt-6 font-body text-base sm:text-xl text-[var(--text-secondary)] max-w-lg leading-relaxed">
-Hi there! I'm Hasan, a student at Batam State Polytechnic with a passion for technology, gaming, and football.            </p>
+Yo, y'all! Just a tech enthusiast from Batam State Polytechnic, enjoying gaming, football, and all things tech.
+           </p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
