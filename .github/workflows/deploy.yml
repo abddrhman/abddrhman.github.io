@@ -33,16 +33,10 @@ jobs:
       - name: Wait 1 minute
         run: sleep 60
       - name: Deploy to hostdata.id via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: ./out/
-          server-dir: /
-          dangerous-allow-insecure: true
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lftp
+          lftp -c "set ftp:ssl-allow no; open -u '${{ secrets.FTP_USERNAME }}','${{ secrets.FTP_PASSWORD }}' ${{ secrets.FTP_SERVER }}; mirror -R ./out/ /"
   deploy:
     needs: build
     runs-on: ubuntu-latest
