@@ -2,10 +2,10 @@ import Link from "next/link";
 import HeroSection from "@/components/home/HeroSection";
 import ProjectCard from "@/components/project/ProjectCard";
 import { BrutalHover } from "@/components/Reveal";
-import { projects } from "@/lib/projects";
+import { getFeaturedProjects } from "@/lib/projects";
 
 export default function HomePage() {
-  const featured = projects.slice(0, 2);
+  const featured = getFeaturedProjects();
 
   return (
     <>
