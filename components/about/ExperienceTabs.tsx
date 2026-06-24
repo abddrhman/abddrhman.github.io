@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Timeline from "./Timeline";
+import Timeline from "../Timeline";
 
 interface TimelineItem {
   year: string;

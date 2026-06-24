@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { articles, getArticleCategories } from "@/lib/articles";
-import ActivityFilter from "@/components/ActivityFilter";
+import ActivityFilter from "@/components/activity/ActivityFilter";
 
 export const metadata: Metadata = {
   title: "activity",

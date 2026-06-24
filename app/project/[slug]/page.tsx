@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { projects, getProjectBySlug } from "@/lib/projects";
-import ProjectDetailContent from "@/components/ProjectDetailContent";
+import ProjectDetailContent from "@/components/project/ProjectDetailContent";
 
 interface Props {
   params: Promise<{ slug: string }>;
