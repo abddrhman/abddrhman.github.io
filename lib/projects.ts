@@ -1,4 +1,5 @@
 export interface Project {
+  id: string;
   title: string;
   description: string;
   tech: string[];
@@ -10,8 +11,15 @@ export interface Project {
   link?: string;
 }
 
+const featuredProjectIds = ["glovoca", "shilau-promotion-web"];
+
+export function getFeaturedProjects(): Project[] {
+  return projects.filter((p) => featuredProjectIds.includes(p.id));
+}
+
 export const projects: Project[] = [
   {
+    id: "glovoca",
     title: "Glovoca : Smart GLove for Sign Language",
     description: "Development of an Internet of Things-Based Smart Glove as a Sign Language-to-Speech Translator",
     tech: ["C++", "Flutter", "Dart", "Python", "Flask", "Pytorch", "MySQL",],
@@ -32,6 +40,7 @@ export const projects: Project[] = [
     link: "",
   },
   {
+    id: "shilau-promotion-web",
     title: "Shilau Promotion Web",
     description: "The SHILAU (Commercialization and Business Services Unit) Website was developed as a digital platform to support the dissemination of information and the management of services and products offered by SHILAU at Batam State Polytechnic.",
     tech: ["PHP", "Laravel", "MySQL", "JavaScript", "Tailwind CSS"],
@@ -55,6 +64,7 @@ export const projects: Project[] = [
     link: "",
   },
   {
+    id: "virtual-event-check-in",
     title: "Virtual Event Check-In",
     description: "The Online Event Attendance App is a digital solution designed to simplify attendance recording for various types of online events, such as webinars, workshops, seminars, and conferences. This app enables event organizers to manage attendee attendance effectively and efficiently..",
     tech: ["PHP", "MYSQL", "Boostrap", "HTML", "Figma"],
