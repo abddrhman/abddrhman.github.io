@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { articles, getArticleBySlug } from "@/lib/articles";
-import ActivityDetailContent from "@/components/ActivityDetailContent";
+import ActivityDetailContent from "@/components/activity/ActivityDetailContent";
 
 interface Props {
   params: Promise<{ slug: string }>;

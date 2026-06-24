@@ -1,6 +1,6 @@
 "use client";
 
-import ExperienceTabs from "@/components/ExperienceTabs";
+import ExperienceTabs from "@/components/about/ExperienceTabs";
 import SkillsGrid from "@/components/SkillsGrid";
 import Reveal, { BrutalHover } from "@/components/Reveal";
 

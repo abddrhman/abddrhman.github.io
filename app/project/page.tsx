@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { projects, getCategories } from "@/lib/projects";
-import ProjectFilter from "@/components/ProjectFilter";
+import ProjectFilter from "@/components/project/ProjectFilter";
 
 export const metadata: Metadata = {
   title: "projects",

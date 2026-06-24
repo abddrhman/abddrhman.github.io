@@ -1,6 +1,6 @@
 import Link from "next/link";
-import HeroSection from "@/components/HeroSection";
-import ProjectCard from "@/components/ProjectCard";
+import HeroSection from "@/components/home/HeroSection";
+import ProjectCard from "@/components/project/ProjectCard";
 import { BrutalHover } from "@/components/Reveal";
 import { projects } from "@/lib/projects";
 
