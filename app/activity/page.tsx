@@ -3,7 +3,7 @@ import { articles, getArticleCategories } from "@/lib/articles";
 import ActivityFilter from "@/components/activity/ActivityFilter";
 
 export const metadata: Metadata = {
-  title: "activity",
+  title: "Activity",
   description: "Articles, talks, and thoughts from qynn.",
 };
 

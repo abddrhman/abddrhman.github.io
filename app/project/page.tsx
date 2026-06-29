@@ -3,7 +3,7 @@ import { projects, getCategories } from "@/lib/projects";
 import ProjectFilter from "@/components/project/ProjectFilter";
 
 export const metadata: Metadata = {
-  title: "projects",
+  title: "Projects",
   description: "A collection of projects by qynn — web apps, design systems, and experimental work.",
 };
 
