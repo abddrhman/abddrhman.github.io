@@ -5,7 +5,7 @@ import { articles } from "@/lib/articles";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://qynn.my.id";
+  const baseUrl = "https://www.hsnabdrrhman.my.id";
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
